@@ -14,24 +14,26 @@ for i = 1,grid_height do
 end
 
 function initEmptyRoad()
+    print("Start emptyRoad")
     for i = 1,grid_height do
         for j = 1,grid_width do
-            road_grid[i[j]] = empty_road
+            road_grid[i][j] = empty_road
         end
     end
+    print("Complete emptyRoad loop")
 end
 
-test = {}
-test[1]="yeet"
-
+print("Pre-emptyRoad")
 initEmptyRoad()
 
 
 for i = 1,grid_height do
+    print("Start print grid")
     for j = 1,grid_width do
-        grid_to_print = tostring(road_grid[i[j]])
-        print(grid_to_print)
+        print(road_grid[i][j])
+        print("Complete print 1 grid cell")
     end
+    print("Complete print grid")
 end
 
 print(test[1])
